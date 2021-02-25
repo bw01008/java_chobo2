@@ -36,7 +36,7 @@ public class FileReaderWriterEx {
 
 	public static void fileReaderWriter() {
 		try (FileReader fr = new FileReader("output.xml");
-				FileWriter fw = new FileWriter("test.xml")) {
+			FileWriter fw = new FileWriter("test.xml")) {
 
 			char[] cbuf = new char[512];
 			while ((fr.read(cbuf)) != -1) {
