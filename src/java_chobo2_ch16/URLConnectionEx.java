@@ -23,7 +23,7 @@ public class URLConnectionEx {
 
 			while ((line = br.readLine()) != null) {
 				System.out.println(line);
-				bw.write(line);
+				bw.write(line);		// 파일로 작성
 			}
 
 		} catch (IOException e) {
