@@ -10,7 +10,7 @@ public class LambdaEx03 {
 
 	public static void main(String[] args) {
 		MyFunction f = () -> System.out.println("myMethod()");
-		aMethod(f);
+		aMethod(f);		//메소드 호출
 		
 		aMethod(() -> System.out.println("myTwoMethod()"));
 	}

@@ -20,10 +20,10 @@ public class LambdaEx02 {
 			}
 		};
 		
-		Collections.sort(list, comp);
+		Collections.sort(list, comp);	//역순정렬
 		System.out.println(list);
 		
-		Collections.sort(list, (o1, o2)->o1.compareTo(o2));
+		Collections.sort(list, (o1, o2)->o1.compareTo(o2));		//순정렬
 		System.out.println(list);
 		
 
