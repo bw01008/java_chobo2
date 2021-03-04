@@ -55,7 +55,7 @@ public class MethodRefEx {
 	public static void main(String[] args) {
 
 		Function<String, Integer> f = s -> Integer.parseInt(s);
-		System.out.println(f.apply("16"));
+		System.out.println(f.apply("16"));	//16 출력
 
 		// 위코드를 아래와 같이 변경할 수 있다. Function인터페이스에 지정된 지네릭 타입으로 쉽게 알아낼 수 있기 때문에 생략이 가능하다
 		Function<String, Integer> f2 = Integer::parseInt;
@@ -72,28 +72,28 @@ public class MethodRefEx {
 		MyClass m3 = new MyClass(5, 3);
 
 		Function<MyClass, Boolean> j = i -> m1.equals(i);	//equals메소드 호출
-		System.out.println(j.apply(m2));
-		System.out.println(j.apply(m3));
+		System.out.println(j.apply(m2));	//false
+		System.out.println(j.apply(m3));	//true
 
 		Function<MyClass, Boolean> k = m1::equals;
-		System.out.println(j.apply(m2));
-		System.out.println(j.apply(m3));
+		System.out.println(j.apply(m2));	//false
+		System.out.println(j.apply(m3));	//true
 		
 		// MyClass()
 		Supplier<MyClass> s = MyClass::new; // 디폴트생성자 호출
-		System.out.println(s.get()); // 생성된 객체가 출력된다.
+		System.out.println(s.get()); // 생성된 객체가 출력된다.(toString) > MyClass [x=0, y=0]
 		
 		// MyClass(int)
-		Function<Integer, MyClass> t = MyClass::new; // 매개변수가 있는 생성자 호출
+		Function<Integer, MyClass> t = MyClass::new; // 매개변수가 1개 있는 생성자 호출
 		System.out.println(t.apply(10));
 
 		// MyClass(int, int)
-		BiFunction<Integer, Integer, MyClass> u = MyClass::new;
+		BiFunction<Integer, Integer, MyClass> u = MyClass::new;// 매개변수가 2개 있는 생성자 호출
 		System.out.println(u.apply(10, 10));
 
 		// array
-		Function<Integer, int[]> v = int[]::new;
-		System.out.println(Arrays.toString(v.apply(5)));
+		Function<Integer, int[]> v = int[]::new;	//배열생성
+		System.out.println(Arrays.toString(v.apply(5)));	
 
 	}// end of main
 
