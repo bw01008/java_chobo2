@@ -9,7 +9,7 @@ public class MidStreamEx {
 
 	public static void main(String[] args) {
 		// 중간연산 - skip, limit, filter, distinct
-//		extracted01();
+		extracted01();
 
 		// sorted
 		extracted02();
@@ -20,9 +20,14 @@ public class MidStreamEx {
 	}
 
 	public static void extracted03() {
-		Stream<Student> stdStream = Stream.of(new Student("이자바", 3, 300), new Student("김자바", 1, 200),
-				new Student("안자바", 2, 100), new Student("박자바", 2, 150), new Student("소자바", 1, 200),
-				new Student("나자바", 3, 290), new Student("감자바", 3, 180));
+		Stream<Student> stdStream = Stream.of
+			   (new Student("이자바", 3, 300), 
+				new Student("김자바", 1, 200),
+				new Student("안자바", 2, 100), 
+				new Student("박자바", 2, 150), 
+				new Student("소자바", 1, 200),
+				new Student("나자바", 3, 290), 
+				new Student("감자바", 3, 180));
 
 		stdStream.sorted(Comparator.comparing(Student::getBan) // 반별정렬
 				.thenComparing(Comparator.naturalOrder())) // 기본정렬(Student클래스에 총점 내림차순이 기본정렬로 설정되어있다)
