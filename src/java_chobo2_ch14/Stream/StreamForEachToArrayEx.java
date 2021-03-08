@@ -5,8 +5,6 @@ import java.util.function.IntConsumer;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-import java_chobo2_ch14.Stream.Student;
-
 public class StreamForEachToArrayEx {
 
 	public static void main(String[] args) {
