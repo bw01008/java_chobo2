@@ -20,7 +20,7 @@ public class FileInputStreamEx {
 		File file = new File("image.jpg"); // 이미지파일을 담은 객체 생성
 		try ( // 1. 지정된 파일이름을 가진 실제 파일과 연결된 FileInputStream을 생성한다.
 				FileInputStream fis = new FileInputStream(file);
-				// 2. 속도를 위해 버퍼(바이트배열) 이용해서 입력 : 주어진 FileInputStream인스턴스를 입력소스로하며 지정된 크기릐 버퍼를 갖는
+				// 2. 속도를 위해 버퍼(바이트배열) 이용해서 입력 : 주어진 FileInputStream인스턴스를 입력소스로하며 지정된 크기의 버퍼를 갖는
 				// 인스턴스 생성
 				BufferedInputStream bis = new BufferedInputStream(fis, 8192);
 				// 3. 지정된 파일이름을 가진 실제 파일과 연결된 FileInputStream을 생성한다.

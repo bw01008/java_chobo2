@@ -7,7 +7,7 @@ import javax.swing.JFileChooser;
 public class FileEx2 {
 
 	public static void main(String[] args) {
-		File f = getSearchFile();	//선택한 파일/디렉토리의 경로를 검색하는 메소드 호출, 반환받은 파일의 주소값을 저장
+		File f = getSearchFile();	//선택한 파일 혹은 디렉토리의 경로를 검색하는 메소드 호출, 반환받은 파일의 주소값을 저장
 
 		if (!f.exists() || !f.isDirectory()) {	//선택된 파일이 존재하지 않거나, 디렉토리가 아니라면(= 파일이라면)
 			System.err.println("유효하지 않은 디렉터리입니다.");	
